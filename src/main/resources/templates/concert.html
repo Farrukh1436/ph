@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PartHunt</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/concert.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navigation">
+          <div class="nav_items">
+            <div class="nav_items_1">
+              <div class="nav_items_logo">
+                <a href="index.html">
+                  <img src="/media/logo.png" alt="Logo" />
+                </a>
+              </div>
+              <ul class="nav_items_links">
+                <li class="nav_items_link">
+                  <a href="#blog">Blog</a>
+                </li>
+                <li class="nav_items_link">
+                  <a href="index.html">Categories</a>
+                </li>
+
+                <li class="nav_items_link">
+                  <a href="index.html">Trending</a>
+                </li>
+
+                <li class="nav_items_link">
+                  <a href="index.html">Contacts</a>
+                </li>
+
+                <li class="nav_items_sign_btn">
+                  <a href="Sign In.html">Sign Up</a>
+                </li>
+                <li class="nav_items_lgn_btn">
+                  <a href="Login.html">Login</a>
+                </li>
+                <li class="nav_items_links_profile hidden">
+                  <a href="profile.html">
+                    <i class="fa-regular fa-user"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <form class="nav_items_form hidden">
+              <div class="nav_items_form_search">
+                <label for="search"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></label>
+                <input
+                  type="search"
+                  id="search"
+                  placeholder="Search by Event, Artist or District"
+                />
+              </div>
+
+              <div class="nav_items_form_location">
+                <select
+                  id="normal-select-2"
+                  placeholder-text="Select the District"
+                >
+                  <option value="1" class="select-dropdown__list-item">
+                    Yunusabad
+                  </option>
+                  <option value="2" class="select-dropdown__list-item">
+                    Almazar
+                  </option>
+                  <option value="3" class="select-dropdown__list-item">
+                    Yakkasaray
+                  </option>
+                  <option value="4" class="select-dropdown__list-item">
+                    Chilanzar
+                  </option>
+                  <option value="5" class="select-dropdown__list-item">
+                    Mirza Ulugbek
+                  </option>
+                  <option value="6" class="select-dropdown__list-item">
+                    Shayhontohur
+                  </option>
+                </select>
+              </div>
+
+              <button class="nav_items_form_btn" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="concert">
+      <div class="container">
+        <div class="concert_items">
+          <div class="hall" method="post">
+            <div class="hall__screen"></div>
+            <div class="seats"></div>
+            <div class="info-box">
+              <p class="info-box__price"></p>
+              <button class="button" disabled>Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/concert.js"></script>
+  </body>
+</html>

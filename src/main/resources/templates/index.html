@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PartyHunt</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navigation">
+          <div class="nav_items">
+            <div class="nav_items_1">
+              <div class="nav_items_logo">
+                <a href="index.html">
+                  <img src="/media/logo.png" alt="Logo" />
+                </a>
+              </div>
+              <ul class="nav_items_links">
+                <li class="nav_items_link">
+                  <a href="#blog">Blog</a>
+                </li>
+                <li class="nav_items_link">
+                  <a href="#category">Categories</a>
+                </li>
+
+                <li class="nav_items_link">
+                  <a href="#trending">Trending</a>
+                </li>
+
+                <li class="nav_items_link">
+                  <a href="#contacts">Contacts</a>
+                </li>
+
+                <li class="nav_items_sign_btn"  th:if="${user == null}">
+                  <a href="sign_in.html">Sign Up</a>
+                </li>
+                <li class="nav_items_lgn_btn"th:if="${user == null}">
+                  <a href="login.html">Login</a>
+                </li>
+                <li class="nav_items_links_profile " th:if="${user != null}">
+                  <a href="profile.html">
+                    <i class="fa-regular fa-user"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+<!--            <form class="nav_items_form hidden">-->
+<!--              <div class="nav_items_form_search">-->
+<!--                <label for="search"-->
+<!--                  ><i class="fa-solid fa-magnifying-glass"></i-->
+<!--                ></label>-->
+<!--                <input-->
+<!--                  type="search"-->
+<!--                  id="search"-->
+<!--                  placeholder="Search by Event, Artist or District"-->
+<!--                />-->
+<!--              </div>-->
+
+<!--              <div class="nav_items_form_location">-->
+<!--                <select-->
+<!--                  id="normal-select-2"-->
+<!--                  placeholder-text="Select the District"-->
+<!--                >-->
+<!--                  <option value="1" class="select-dropdown__list-item">-->
+<!--                    Yunusabad-->
+<!--                  </option>-->
+<!--                  <option value="2" class="select-dropdown__list-item">-->
+<!--                    Almazar-->
+<!--                  </option>-->
+<!--                  <option value="3" class="select-dropdown__list-item">-->
+<!--                    Yakkasaray-->
+<!--                  </option>-->
+<!--                  <option value="4" class="select-dropdown__list-item">-->
+<!--                    Chilanzar-->
+<!--                  </option>-->
+<!--                  <option value="5" class="select-dropdown__list-item">-->
+<!--                    Mirza Ulugbek-->
+<!--                  </option>-->
+<!--                  <option value="6" class="select-dropdown__list-item">-->
+<!--                    Shayhontohur-->
+<!--                  </option>-->
+<!--                </select>-->
+<!--              </div>-->
+
+<!--              <button class="nav_items_form_btn" type="submit">Search</button>-->
+<!--            </form>-->
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="blog" class="main">
+      <div class="container">
+        <div class="main_items">
+          <div class="gallery-container">
+            <div
+              class="gallery-item gallery-item-1"
+              style="background-image: url('/media/main_image.png')"
+            >
+              <h2 class="main_wrapper_head">
+                Get your music fix with festival!!
+              </h2>
+              <a class="main_wrapper_btn" href="#category">Book Now</a>
+            </div>
+            <div
+              class="gallery-item gallery-item-2"
+              style="background-image: url('/media/main_image_2.png')"
+            >
+              <h2 class="main_wrapper_head">
+                Get your music fix with festival!!
+              </h2>
+              <a class="main_wrapper_btn" href="#category">Book Now</a>
+            </div>
+            <div
+              class="gallery-item gallery-item-3"
+              style="background-image: url('/media/main_image_3.png')"
+            >
+              <h2 class="main_wrapper_head">
+                Get your music fix with festival!!
+              </h2>
+              <a class="main_wrapper_btn" href="#category">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="category" class="category">
+      <div class="container">
+        <div class="category_items">
+          <div class="category_items_head">
+            <h2 class="category_items_head_title">Browse by category</h2>
+            <a class="category_items_head_btn" href="#">See More</a>
+          </div>
+          <span></span>
+          <div class="category_items_select">
+            <div class="category_items_select_wrapper">
+              <img src="/media/caoncert.png" alt="" />
+              <a class="category_items_select_wrapper_btn" href="concert.html"
+                >Concert</a
+              >
+            </div>
+            <div class="category_items_select_wrapper">
+              <img src="/media/sport.png" alt="" />
+              <a class="category_items_select_wrapper_btn" href="#">Sport</a>
+            </div>
+            <div class="category_items_select_wrapper">
+              <img src="/media/family.png" alt="" />
+              <a class="category_items_select_wrapper_btn" href="#">Family</a>
+            </div>
+            <div class="category_items_select_wrapper">
+              <img src="/media/theather.png" alt="" />
+              <a class="category_items_select_wrapper_btn" href="#"
+                >Theater</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trending" class="picks">
+      <div class="container">
+        <div class="picks_items">
+          <div class="picks_items_head">
+            <h2 class="picks_items_head_title">Top Picks Near You</h2>
+          </div>
+          <span></span>
+          <div class="picks_items_events">
+            <div class="picks_items_events_1">
+              <div class="picks_items_events_1_wrapper">
+                <div class="picks_items_events_1_img"></div>
+                <div class="picks_items_events_1_info">
+                  <p class="picks_items_events_1_info_date">Aug 13</p>
+                  <p class="picks_items_events_1_info_time">Sun • 10:00am</p>
+                  <h3 class="picks_items_events_1_info_name">
+                    Elements Music and Arts Festival - Sunday
+                  </h3>
+                  <h3 class="picks_items_events_1_info_place">
+                    Pocono Roceway
+                  </h3>
+                </div>
+              </div>
+
+              <div class="picks_items_events_1_btns">
+                <a class="picks_items_events_1_btns_view" href="#"
+                  >View Details</a
+                >
+                <a class="picks_items_events_1_btns_book" href="#">Book Now</a>
+              </div>
+            </div>
+
+            <div class="picks_items_events_1">
+              <div class="picks_items_events_1_wrapper">
+                <div class="picks_items_events_2_img"></div>
+                <div class="picks_items_events_1_info">
+                  <p class="picks_items_events_1_info_date">Aug 13</p>
+                  <p class="picks_items_events_1_info_time">Sun • 10:00am</p>
+                  <h3 class="picks_items_events_1_info_name">
+                    Orange County Fair - Admission
+                  </h3>
+                  <h3 class="picks_items_events_1_info_place">
+                    Orange County Fair and Event Center
+                  </h3>
+                </div>
+              </div>
+
+              <div class="picks_items_events_1_btns">
+                <a class="picks_items_events_1_btns_view" href="#"
+                  >View Details</a
+                >
+                <a class="picks_items_events_1_btns_book" href="#">Book Now</a>
+              </div>
+            </div>
+            <div class="picks_items_events_1">
+              <div class="picks_items_events_1_wrapper">
+                <div class="picks_items_events_3_img"></div>
+                <div class="picks_items_events_1_info">
+                  <p class="picks_items_events_1_info_date">Aug 13</p>
+                  <p class="picks_items_events_1_info_time">Sun • 10:00am</p>
+                  <h3 class="picks_items_events_1_info_name">
+                    Orange County Fair - Admission
+                  </h3>
+                  <h3 class="picks_items_events_1_info_place">
+                    Orange County Fair and Event Center
+                  </h3>
+                </div>
+              </div>
+
+              <div class="picks_items_events_1_btns">
+                <a class="picks_items_events_1_btns_view" href="#"
+                  >View Details</a
+                >
+                <a class="picks_items_events_1_btns_book" href="#">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contacts" class="footer">
+      <div class="container">
+        <div class="footer_items">
+          <div class="footer_items_wrapper">
+            <div class="footer_items_wrapper_img">
+              <a href="index.html"
+                ><img src="/media/logo.png" alt=""
+              /></a>
+            </div>
+            <ul class="footer_items_wrapper_links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Trending Events</a></li>
+              <li><a href="#">Categories</a></li>
+            </ul>
+            <div class="footer_items_wrapper_contact">
+              <div class="footer_items_wrapper_contact_icon">
+                <div class="footer_items_wrapper_contact_icon_1">
+                  <i class="fa-regular fa-envelope"></i>
+                  <p>Email</p>
+                </div>
+                <div class="footer_items_wrapper_contact_icon_1">
+                  <i class="fa-solid fa-phone"></i>
+                  <p>Phone Number</p>
+                </div>
+                <div class="footer_items_wrapper_contact_icon_1">
+                  <i class="fa-regular fa-calendar"></i>
+                  <p>Working Days</p>
+                </div>
+                <div class="footer_items_wrapper_contact_icon_1">
+                  <i class="fa-regular fa-clock"></i>
+                  <p>Working Hours</p>
+                </div>
+                <div class="footer_items_wrapper_contact_icon_1">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>Adress</p>
+                </div>
+              </div>
+
+              <div class="footer_items_wrapper_contact_info">
+                <p>sparessupport@partyhunt.in</p>
+                <p>+998 (91) 087 06-77</p>
+                <p>Monday-Sunday</p>
+                <p>8:00AM - 8:00PM</p>
+                <p>Tashkent City</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

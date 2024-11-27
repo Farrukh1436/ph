@@ -1,0 +1,147 @@
+body {
+  background-color: #fff;
+}
+
+.concert_items {
+  margin-top: 7rem;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem 0;
+  margin: 7rem auto 0 auto;
+}
+
+.hall {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #fff;
+  overflow: hidden;
+}
+.hall__screen {
+  margin: 0 auto;
+  height: 150px;
+  width: 450px;
+  margin-bottom: -15px;
+  background-image: url("https://pp.userapi.com/c637817/v637817124/51e82/0vv1WFX0TlM.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: perspective(1000px) rotateX(-30deg);
+  overflow: hidden;
+  box-shadow: 0 40px 55px -17px rgba(80, 80, 80, 0.5);
+}
+
+.seats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: perspective(1000px) rotateX(30deg);
+  counter-reset: RowLeft RowRight;
+}
+.seats__row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+}
+.seats__row:before,
+.seats__row:after {
+  position: absolute;
+  top: 10px;
+  width: 10px;
+  color: #fff;
+  opacity: 0.5;
+}
+.seats__row:before {
+  left: -15px;
+  text-align: right;
+  counter-increment: RowLeft;
+  content: counter(RowLeft);
+}
+.seats__row:after {
+  right: -15px;
+  text-align: left;
+  counter-increment: RowRight;
+  content: counter(RowRight);
+}
+.seats__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 18px;
+  width: 18px;
+  margin: 8px;
+  padding: 3px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.seats__item:hover {
+  transform: scale(1.4);
+}
+.seats__item:hover .seats__item-num {
+  opacity: 1;
+}
+.seats__item_selected {
+  background-color: #ff9800;
+  transform: scale(1.4);
+  z-index: 10;
+  box-shadow: 0 3px 10px 0 rgba(255, 152, 0, 0.6);
+}
+.seats__item_selected .seats__item-num {
+  opacity: 1;
+}
+.seats__item-num {
+  opacity: 0;
+  color: #fff;
+  transition: 0.1s ease;
+}
+
+.seats__item_booked {
+  scale: 1.4;
+  background-color: red;
+  cursor: not-allowed;
+  pointer-events: none; /* Prevent further clicks */
+}
+
+.seats__item_booked .seats__item-num {
+  font-weight: bold;
+  opacity: 1;
+}
+
+
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+}
+.info-box__price {
+  margin: 0;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.info-box__price-value {
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #03a9f4;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:disabled {
+  opacity: 0.2;
+}
+
+
