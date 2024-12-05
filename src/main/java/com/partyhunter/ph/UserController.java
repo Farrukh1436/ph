@@ -22,7 +22,7 @@ public class UserController
     private UserRepository userRepository;
 
     @PostMapping("/sign_in")
-    public String handle_sign_in(@RequestParam String username, @RequestParam String email,
+    public String handle_sign_in(@RequestParam String fullName,@RequestParam String username, @RequestParam String email,
                                  @RequestParam String password,
                                  RedirectAttributes redirectAttributes,
                                  HttpSession session)
@@ -55,6 +55,7 @@ public class UserController
             return "redirect:/sign_in.html";  // Return to the signup page with collected errors
         }
         User user = new User();
+        user.setFullName(fullName);
         user.setUsername(username);
         user.setEmail(email);
         user.setPassword(password); // Consider hashing the password
@@ -62,6 +63,7 @@ public class UserController
         userRepository.save(user);
         // Set session attribute for logged in status
         session.setAttribute("user", user);
+
 
         return "redirect:/index.html";  // Redirect to a success page
     }
@@ -101,6 +103,7 @@ public class UserController
 
         // Set session attribute for logged in status
         session.setAttribute("user", user);
+
 
         // Redirect to a success page (user is authenticated)
         return "redirect:/index.html";

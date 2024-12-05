@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>PartHunt</title>
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style.css?v=1.0" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="/css/profile.css">
@@ -50,6 +51,11 @@
                   <li class="nav_items_links_profile ">
                     <a href="profile.html">
                       <i class="fa-regular fa-user"></i>
+                    </a>
+                  </li>
+                  <li class="nav_items_links_logout ">
+                    <a href="index.html">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </a>
                   </li>
                 </ul>
@@ -108,8 +114,9 @@
                   <img src="/media/profile_image.jpg" alt="img">
                 </div>
                 <div class="profile_items_wrapper_head_info">
-                  <h2 class="profile_name">Bekhruz Tuymuradov</h2>
-                  <p class="profile_email">bexruztuymuradov0677@gmail.com</p>
+                    <!-- Inject user data dynamically -->
+                    <h2 class="profile_name" th:text="${user.fullName}">Default Name</h2>
+                    <p class="profile_email" th:text="${user.email}">default@example.com
                 </div>
               </div>
               <div class="profile_items_wrapper_info">
@@ -118,7 +125,7 @@
                     Username
                   </p>
                   <div class="taken_username_wrapper">
-                    <p class="taken_username">GaRRiK</p>
+                    <p class="taken_username" th:text="${user.username}">DefaultUsername</p>
                   </div>
                 </div>
 
@@ -127,7 +134,7 @@
                     Email Adress
                   </p>
                   <div class="taken_email_wrapper">
-                    <p class="taken_email">bexruztuymuradov0677@gmail.com</p>
+                      <p class="taken_username" th:text="${user.email}">DefaultUsername</p>
                   </div>
                 </div>
 

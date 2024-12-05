@@ -22,8 +22,6 @@ public class Seat
     private boolean isReserved;
     @NotNull
     private String eventType;
-    private String reservedBy;  // Optional: User reference
-
     @ManyToOne
     private User user;  // Null if not booked
 
@@ -35,7 +33,6 @@ public class Seat
                 ", seatNumber=" + seatNumber +
                 ", isReserved=" + isReserved +
                 ", eventType='" + eventType + '\'' +
-                ", reservedBy='" + reservedBy + '\'' +
                 ", user=" + user +
                 '}';
     }
@@ -80,13 +77,6 @@ public class Seat
         this.eventType = eventType;
     }
 
-    public String getReservedBy() {
-        return reservedBy;
-    }
-
-    public void setReservedBy(String reservedBy) {
-        this.reservedBy = reservedBy;
-    }
 
     public User getUser() {
         return user;

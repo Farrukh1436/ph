@@ -49,13 +49,13 @@
                   <a href="index.html">Contacts</a>
                 </li>
 
-                <li class="nav_items_sign_btn">
-                  <a href="Sign In.html">Sign Up</a>
+                <li class="nav_items_sign_btn"  th:if="${user == null}">
+                  <a href="sign_in.html">Sign Up</a>
                 </li>
-                <li class="nav_items_lgn_btn">
-                  <a href="Login.html">Login</a>
+                <li class="nav_items_lgn_btn"th:if="${user == null}">
+                  <a href="login.html">Login</a>
                 </li>
-                <li class="nav_items_links_profile hidden">
+                <li class="nav_items_links_profile " th:if="${user != null}">
                   <a href="profile.html">
                     <i class="fa-regular fa-user"></i>
                   </a>
@@ -92,7 +92,7 @@
                     Chilanzar
                   </option>
                   <option value="5" class="select-dropdown__list-item">
-                    Mirza Ulugbek
+                    Mirzo Ulug'bek
                   </option>
                   <option value="6" class="select-dropdown__list-item">
                     Shayhontohur
