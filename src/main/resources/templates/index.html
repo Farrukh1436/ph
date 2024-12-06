@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PartyHunt</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css?v=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -60,46 +60,6 @@
                 </li>
               </ul>
             </div>
-<!--            <form class="nav_items_form hidden">-->
-<!--              <div class="nav_items_form_search">-->
-<!--                <label for="search"-->
-<!--                  ><i class="fa-solid fa-magnifying-glass"></i-->
-<!--                ></label>-->
-<!--                <input-->
-<!--                  type="search"-->
-<!--                  id="search"-->
-<!--                  placeholder="Search by Event, Artist or District"-->
-<!--                />-->
-<!--              </div>-->
-
-<!--              <div class="nav_items_form_location">-->
-<!--                <select-->
-<!--                  id="normal-select-2"-->
-<!--                  placeholder-text="Select the District"-->
-<!--                >-->
-<!--                  <option value="1" class="select-dropdown__list-item">-->
-<!--                    Yunusabad-->
-<!--                  </option>-->
-<!--                  <option value="2" class="select-dropdown__list-item">-->
-<!--                    Almazar-->
-<!--                  </option>-->
-<!--                  <option value="3" class="select-dropdown__list-item">-->
-<!--                    Yakkasaray-->
-<!--                  </option>-->
-<!--                  <option value="4" class="select-dropdown__list-item">-->
-<!--                    Chilanzar-->
-<!--                  </option>-->
-<!--                  <option value="5" class="select-dropdown__list-item">-->
-<!--                    Mirza Ulugbek-->
-<!--                  </option>-->
-<!--                  <option value="6" class="select-dropdown__list-item">-->
-<!--                    Shayhontohur-->
-<!--           Login       </option>-->
-<!--                </select>-->
-<!--              </div>-->
-
-<!--              <button class="nav_items_form_btn" type="submit">Search</button>-->
-<!--            </form>-->
           </div>
         </nav>
       </div>
@@ -182,74 +142,219 @@
             <h2 class="picks_items_head_title">Top Picks Near You</h2>
           </div>
           <span></span>
-          <div class="picks_items_events">
-            <div class="picks_items_events_1">
-              <div class="picks_items_events_1_wrapper">
-                <div class="picks_items_events_1_img"></div>
-                <div class="picks_items_events_1_info">
-                  <p class="picks_items_events_1_info_date">Aug 13</p>
-                  <p class="picks_items_events_1_info_time">Sun • 10:00am</p>
-                  <h3 class="picks_items_events_1_info_name">
-                    Elements Music and Arts Festival - Sunday
-                  </h3>
-                  <h3 class="picks_items_events_1_info_place">
-                    Pocono Roceway
-                  </h3>
+          <div class="picks_events">
+            <div class="pics_events_field">
+              <div class = "events_1">
+                <div class="picks_event_wrapper_1">
+                  <div class="event_wrapper_img">
+                    <img src="/media/event_1.png" alt="Event 1">
+                  </div>
+                  <div class="event_wrapper_info">
+                    <h3 id="even_title" class="event_wrapper_info_head">
+                      Title
+                    </h3>
+                    <p id="even_description" class="event_wrapper_info_descr">
+                      Description
+                    </p>
+                    <div class="event_wrapper_info_date">
+                      <i class="fa-solid fa-calendar"></i>
+                      <p id="even_data">Date</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-clock"></i>
+                      <p id="even_time">Time</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <p id="even_location">Location</p>
+                    </div>
+                    <div class="event_wrapper_info_price">
+                      <div class="event_wrapper_info_price_seat">
+                        <p class="for_each_seat">Seat price</p>
+                        <p id="event_price">$18.75</p>
+
+                      </div>
+                      <a href="concert.html">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="picks_event_wrapper_2">
+                  <div class="event_wrapper_img">
+                    <img src="/media/event_2.png" alt="Event 1">
+                  </div>
+                  <div class="event_wrapper_info">
+                    <h3 id="even_title_1" class="event_wrapper_info_head">
+                      Title
+                    </h3>
+                    <p id="even_description_1" class="event_wrapper_info_descr">
+                      Description
+                    </p>
+                    <div class="event_wrapper_info_date">
+                      <i class="fa-solid fa-calendar"></i>
+                      <p id="even_data_1">Date</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-clock"></i>
+                      <p id="even_time_1">Time</p>
+                    </div>
+                    <div class="event_wrapper_info_location">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <p id="even_location_1">Location</p>
+                    </div>
+                    <div class="event_wrapper_info_price">
+                      <div class="event_wrapper_info_price_seat">
+                        <p class="for_each_seat">Seat price</p>
+                        <p id="event_price_1">$18.75</p>
+
+                      </div>
+                      <a href="concert.html">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="picks_event_wrapper_3">
+                  <div class="event_wrapper_img">
+                    <img src="/media/event_3.png" alt="Event 1">
+                  </div>
+                  <div class="event_wrapper_info">
+                    <h3 id="even_title_2" class="event_wrapper_info_head">
+                      Title
+                    </h3>
+                    <p id="even_description_2" class="event_wrapper_info_descr">
+                      Description
+                    </p>
+                    <div class="event_wrapper_info_date">
+                      <i class="fa-solid fa-calendar"></i>
+                      <p id="even_data_2">Date</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-clock"></i>
+                      <p id="even_time_2">Time</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <p id="even_location_2">Location</p>
+                    </div>
+                    <div class="event_wrapper_info_price">
+                      <div class="event_wrapper_info_price_seat">
+                        <p class="for_each_seat">Seat price</p>
+                        <p id="event_price_2">$18.75</p>
+
+                      </div>
+                      <a href="concert.html">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class = "events_1">
+                <div class="picks_event_wrapper_4">
+                  <div class="event_wrapper_img">
+                    <img src="/media/event_4.png" alt="Event 1">
+                  </div>
+                  <div class="event_wrapper_info">
+                    <h3 id="even_title_3" class="event_wrapper_info_head">
+                      Title
+                    </h3>
+                    <p id="even_description_3" class="event_wrapper_info_descr">
+                      Description
+                    </p>
+                    <div class="event_wrapper_info_date">
+                      <i class="fa-solid fa-calendar"></i>
+                      <p id="even_data_3">Date</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-clock"></i>
+                      <p id="even_time_3">Time</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <p id="even_location_3">Location</p>
+                    </div>
+                    <div class="event_wrapper_info_price">
+                      <div class="event_wrapper_info_price_seat">
+                        <p class="for_each_seat">Seat price</p>
+                        <p id="event_price_3">$18.75</p>
+
+                      </div>
+                      <a href="concert.html">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="picks_event_wrapper_5">
+                  <div class="event_wrapper_img">
+                    <img src="/media/event_5.png" alt="Event 1">
+                  </div>
+                  <div class="event_wrapper_info">
+                    <h3 id="even_title_4" class="event_wrapper_info_head">
+                      Title
+                    </h3>
+                    <p id="even_description_4" class="event_wrapper_info_descr">
+                      Description
+                    </p>
+                    <div class="event_wrapper_info_date">
+                      <i class="fa-solid fa-calendar"></i>
+                      <p id="even_data_4">Date</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-clock"></i>
+                      <p id="even_time_4">Time</p>
+                    </div>
+                    <div class="event_wrapper_info_location">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <p id="even_location_4">Location</p>
+                    </div>
+                    <div class="event_wrapper_info_price">
+                      <div class="event_wrapper_info_price_seat">
+                        <p class="for_each_seat">Seat price</p>
+                        <p id="event_price_4">$18.75</p>
+
+                      </div>
+                      <a href="concert.html">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="picks_event_wrapper_6">
+                  <div class="event_wrapper_img">
+                    <img src="/media/event_6.png" alt="Event 1">
+                  </div>
+                  <div class="event_wrapper_info">
+                    <h3 id="even_title_5" class="event_wrapper_info_head">
+                      Title
+                    </h3>
+                    <p id="even_description_5" class="event_wrapper_info_descr">
+                      Description
+                    </p>
+                    <div class="event_wrapper_info_date">
+                      <i class="fa-solid fa-calendar"></i>
+                      <p id="even_data_5">Date</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-clock"></i>
+                      <p id="even_time_5">Time</p>
+                    </div>
+                    <div class="event_wrapper_info_time">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <p id="even_location_5">Location</p>
+                    </div>
+                    <div class="event_wrapper_info_price">
+                      <div class="event_wrapper_info_price_seat">
+                        <p class="for_each_seat">Seat price</p>
+                        <p id="event_price_5">$18.75</p>
+
+                      </div>
+                      <a href="concert.html">Buy Now</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="picks_items_events_1_btns">
-                <a class="picks_items_events_1_btns_view" href="#"
-                  >View Details</a
-                >
-                <a class="picks_items_events_1_btns_book" href="#">Book Now</a>
-              </div>
             </div>
 
-            <div class="picks_items_events_1">
-              <div class="picks_items_events_1_wrapper">
-                <div class="picks_items_events_2_img"></div>
-                <div class="picks_items_events_1_info">
-                  <p class="picks_items_events_1_info_date">Aug 13</p>
-                  <p class="picks_items_events_1_info_time">Sun • 10:00am</p>
-                  <h3 class="picks_items_events_1_info_name">
-                    Orange County Fair - Admission
-                  </h3>
-                  <h3 class="picks_items_events_1_info_place">
-                    Orange County Fair and Event Center
-                  </h3>
-                </div>
-              </div>
-
-              <div class="picks_items_events_1_btns">
-                <a class="picks_items_events_1_btns_view" href="#"
-                  >View Details</a
-                >
-                <a class="picks_items_events_1_btns_book" href="#">Book Now</a>
-              </div>
+            <div class="buttons">
+              <div id="previous" onclick="markAsVisited(this)"></div>
+              <div id="next" onclick="markAsVisited(this)"></div>
             </div>
-            <div class="picks_items_events_1">
-              <div class="picks_items_events_1_wrapper">
-                <div class="picks_items_events_3_img"></div>
-                <div class="picks_items_events_1_info">
-                  <p class="picks_items_events_1_info_date">Aug 13</p>
-                  <p class="picks_items_events_1_info_time">Sun • 10:00am</p>
-                  <h3 class="picks_items_events_1_info_name">
-                    Orange County Fair - Admission
-                  </h3>
-                  <h3 class="picks_items_events_1_info_place">
-                    Orange County Fair and Event Center
-                  </h3>
-                </div>
-              </div>
 
-              <div class="picks_items_events_1_btns">
-                <a class="picks_items_events_1_btns_view" href="#"
-                  >View Details</a
-                >
-                <a class="picks_items_events_1_btns_book" href="#">Book Now</a>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

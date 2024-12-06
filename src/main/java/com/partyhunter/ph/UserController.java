@@ -3,6 +3,8 @@ package com.partyhunter.ph;
 
 
 import java.util.Optional;
+
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -109,5 +111,16 @@ public class UserController
         return "redirect:/index.html";
     }
 
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        // Invalidate the session
+        HttpSession session = request.getSession();
+        session.invalidate();
+
+        // Redirect to homepage or login page
+        return "redirect:/index.html";
+    }
+
 }
+
 

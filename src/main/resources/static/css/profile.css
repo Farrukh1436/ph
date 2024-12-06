@@ -175,12 +175,13 @@ padding: 4rem 0 4rem 0;
         perspective: 150rem;
 -moz-perspective: 150rem;
 position: relative;
-height: 27rem;
 width: 360px;
+    height: 30rem;
+
 }
 
 .card__side {
-height: 27rem;
+    height: 30rem;
 -webkit-transition: all 0.8s ease;
 transition: all 0.8s ease;
 position: absolute;

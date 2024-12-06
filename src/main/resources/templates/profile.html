@@ -8,7 +8,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="/css/profile.css">
+        <link rel="stylesheet" href="/css/profile.css?v=1.0">
         <link
           href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
           rel="stylesheet"
@@ -54,7 +54,7 @@
                     </a>
                   </li>
                   <li class="nav_items_links_logout ">
-                    <a href="index.html">
+                    <a href="/logout">
                       <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </a>
                   </li>
@@ -147,7 +147,6 @@
                       <div class="card__details">
                         <div class="car_details_img">
                             <img src="/media/caoncert.png" alt="">
-            
                         </div>
                         <div class="card__details_info">
                             <h4 class="card__details_info_head">Concert</h4>
@@ -166,74 +165,76 @@
                     <div class="card__side card__side--back card__side--back-2">
                       <div class="card__cta">
                         <div class="card__price-box">
-                          <p class="card__price-only">4 seats were booked</p>
+                            <p class="card__price-only" th:text="${bookedSeats} + ' seats were booked'">
+                                4 seats were booked
+                            </p>
                           <p class="card__price-value">$24</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card__side card__side--front-2">
-                      <div class="card__details">
-                        <div class="car_details_img">
-                            <img src="/media/caoncert.png" alt="">
-            
-                        </div>
-                        <div class="card__details_info">
-                            <h4 class="card__details_info_head">Concert</h4>
-                            <p class="card__details_info_sub">Organized by <span>The World Organizer</span></p>
-                            <div class="card__details_info_data">
-                                <i class="fa-regular fa-calendar"></i>
-                                <p>11 January 2025</p>
-                            </div>
-                            <div class="card__details_info_time">
-                                <i class="fa-regular fa-clock"></i>
-                                <p>19:00 PM</p>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__side card__side--back card__side--back-2">
-                      <div class="card__cta">
-                        <div class="card__price-box">
-                          <p class="card__price-only">4 seats were booked</p>
-                          <p class="card__price-value">$24</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<!--                  <div class="card">-->
+<!--                    <div class="card__side card__side&#45;&#45;front-2">-->
+<!--                      <div class="card__details">-->
+<!--                        <div class="car_details_img">-->
+<!--                            <img src="/media/caoncert.png" alt="">-->
+<!--            -->
+<!--                        </div>-->
+<!--                        <div class="card__details_info">-->
+<!--                            <h4 class="card__details_info_head">Concert</h4>-->
+<!--                            <p class="card__details_info_sub">Organized by <span>The World Organizer</span></p>-->
+<!--                            <div class="card__details_info_data">-->
+<!--                                <i class="fa-regular fa-calendar"></i>-->
+<!--                                <p>11 January 2025</p>-->
+<!--                            </div>-->
+<!--                            <div class="card__details_info_time">-->
+<!--                                <i class="fa-regular fa-clock"></i>-->
+<!--                                <p>19:00 PM</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="card__side card__side&#45;&#45;back card__side&#45;&#45;back-2">-->
+<!--                      <div class="card__cta">-->
+<!--                        <div class="card__price-box">-->
+<!--                          <p class="card__price-only">4 seats were booked</p>-->
+<!--                          <p class="card__price-value">$24</p>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
 
-                  <div class="card">
-                    <div class="card__side card__side--front-2">
-                      <div class="card__details">
-                        <div class="car_details_img">
-                            <img src="/media/caoncert.png" alt="">
-            
-                        </div>
-                        <div class="card__details_info">
-                            <h4 class="card__details_info_head">Concert</h4>
-                            <p class="card__details_info_sub">Organized by <span>The World Organizer</span></p>
-                            <div class="card__details_info_data">
-                                <i class="fa-regular fa-calendar"></i>
-                                <p>11 January 2025</p>
-                            </div>
-                            <div class="card__details_info_time">
-                                <i class="fa-regular fa-clock"></i>
-                                <p>19:00 PM</p>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__side card__side--back card__side--back-2">
-                      <div class="card__cta">
-                        <div class="card__price-box">
-                          <p class="card__price-only">4 seats were booked</p>
-                          <p class="card__price-value">$24</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<!--                  <div class="card">-->
+<!--                    <div class="card__side card__side&#45;&#45;front-2">-->
+<!--                      <div class="card__details">-->
+<!--                        <div class="car_details_img">-->
+<!--                            <img src="/media/caoncert.png" alt="">-->
+<!--            -->
+<!--                        </div>-->
+<!--                        <div class="card__details_info">-->
+<!--                            <h4 class="card__details_info_head">Concert</h4>-->
+<!--                            <p class="card__details_info_sub">Organized by <span>The World Organizer</span></p>-->
+<!--                            <div class="card__details_info_data">-->
+<!--                                <i class="fa-regular fa-calendar"></i>-->
+<!--                                <p>11 January 2025</p>-->
+<!--                            </div>-->
+<!--                            <div class="card__details_info_time">-->
+<!--                                <i class="fa-regular fa-clock"></i>-->
+<!--                                <p>19:00 PM</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="card__side card__side&#45;&#45;back card__side&#45;&#45;back-2">-->
+<!--                      <div class="card__cta">-->
+<!--                        <div class="card__price-box">-->
+<!--                          <p class="card__price-only">4 seats were booked</p>-->
+<!--                          <p class="card__price-value">$24</p>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
                 </div>
               </div>
             </div>

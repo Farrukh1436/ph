@@ -14,6 +14,9 @@ public class WebController
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private SeatBookingService seatBookingService;
+
     @GetMapping("")
     public String home_page()
     {
@@ -56,8 +59,13 @@ public class WebController
         // Fetch user details from the database using userId
         User fetchedUser = userService.getUserById(userId);
 
+        // Fetch booked seats for the user
+        int bookedSeats = seatBookingService.getBookedSeatsByUser(user.getId());
+
+
         // Add the fetched user data to the model to pass it to the view
         model.addAttribute("user", fetchedUser);
+        model.addAttribute("bookedSeats", bookedSeats);
 
         return "profile";  // This returns the profile.html view
     }

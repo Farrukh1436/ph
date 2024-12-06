@@ -2,40 +2,40 @@ document.addEventListener("DOMContentLoaded", createSelect, false);
 
 function createSelect() {
   var select = document.getElementsByTagName("select"),
-    liElement,
-    ulElement,
-    optionValue,
-    iElement,
-    optionText,
-    selectDropdown,
-    elementParentSpan;
+      liElement,
+      ulElement,
+      optionValue,
+      iElement,
+      optionText,
+      selectDropdown,
+      elementParentSpan;
 
-  for (var select_i = 0, len = select.length; select_i < len; select_i++) {
+  for (var selectIndex = 0, len = select.length; selectIndex < len; selectIndex++) {
     //console.log('selects init');
 
-    select[select_i].style.display = "none";
+    select[selectIndex].style.display = "none";
     wrapElement(
-      document.getElementById(select[select_i].id),
-      document.createElement("div"),
-      select_i,
-      select[select_i].getAttribute("placeholder-text")
+        document.getElementById(select[selectIndex].id),
+        document.createElement("div"),
+        selectIndex,
+        select[selectIndex].getAttribute("placeholder-text")
     );
 
-    for (var i = 0; i < select[select_i].options.length; i++) {
+    for (var i = 0; i < select[selectIndex].options.length; i++) {
       liElement = document.createElement("li");
-      optionValue = select[select_i].options[i].value;
-      optionText = document.createTextNode(select[select_i].options[i].text);
+      optionValue = select[selectIndex].options[i].value;
+      optionText = document.createTextNode(select[selectIndex].options[i].text);
       liElement.className = "select-dropdown__list-item";
       liElement.setAttribute("data-value", optionValue);
       liElement.appendChild(optionText);
       ulElement.appendChild(liElement);
 
       liElement.addEventListener(
-        "click",
-        function () {
-          displyUl(this);
-        },
-        false
+          "click",
+          function () {
+            displyUl(this);
+          },
+          false
       );
     }
   }
@@ -52,14 +52,14 @@ function createSelect() {
     });
 
     var buttonElement = document.createElement("button"),
-      spanElement = document.createElement("span"),
-      spanText = document.createTextNode(placeholder);
+        spanElement = document.createElement("span"),
+        spanText = document.createTextNode(placeholder);
     iElement = document.createElement("i");
     ulElement = document.createElement("ul");
 
     wrapper.className = "select-dropdown select-dropdown--" + i;
     buttonElement.className =
-      "select-dropdown__button select-dropdown__button--" + i;
+        "select-dropdown__button select-dropdown__button--" + i;
     buttonElement.setAttribute("data-value", "");
     buttonElement.setAttribute("type", "button");
     spanElement.className = "select-dropdown select-dropdown--" + i;
@@ -85,15 +85,15 @@ function createSelect() {
       }
     } else if (element.tagName == "LI") {
       var selectId =
-        element.parentNode.parentNode.getElementsByTagName("select")[0];
+          element.parentNode.parentNode.getElementsByTagName("select")[0];
       selectElement(selectId.id, element.getAttribute("data-value"));
       elementParentSpan =
-        element.parentNode.parentNode.getElementsByTagName("span");
+          element.parentNode.parentNode.getElementsByTagName("span");
       element.parentNode.classList.toggle("active");
       elementParentSpan[0].textContent = element.textContent;
       elementParentSpan[0].parentNode.setAttribute(
-        "data-value",
-        element.getAttribute("data-value")
+          "data-value",
+          element.getAttribute("data-value")
       );
     }
   }
@@ -105,12 +105,12 @@ function createSelect() {
   var buttonSelect = document.getElementsByClassName("select-dropdown__button");
   for (var i = 0, len = buttonSelect.length; i < len; i++) {
     buttonSelect[i].addEventListener(
-      "click",
-      function (e) {
-        e.preventDefault();
-        displyUl(this);
-      },
-      false
+        "click",
+        function (e) {
+          e.preventDefault();
+          displyUl(this);
+        },
+        false
     );
   }
 }
@@ -164,4 +164,60 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update visibility after rotation
     updateVisibility();
   }, 2500); // Adjust the interval as needed
+
+
+
+
+
+
+  /*Carousel */
+
+  const slides = document.querySelectorAll('.events_1'),
+      slidesWrapper = document.querySelector('.picks_events'),
+      sliderField = document.querySelector('.pics_events_field'),
+      width = getComputedStyle(slidesWrapper).width, //650px
+      prev = document.querySelector('#previous'),
+      next = document.querySelector('#next');
+
+  let offset = 0;
+
+  sliderField.style.width = 100 * slides.length + '%';
+
+  sliderField.style.display = 'flex';
+  sliderField.style.transition = '0.5s ease';
+  slidesWrapper.style.overflow = 'hidden';
+
+  slides.forEach(slide => {
+    slide.style.width = width;
+  });
+
+
+  next.addEventListener('click', () => {
+    // Logic for sliding
+    if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+      offset = 0;
+    } else {
+      offset += +width.slice(0, width.length - 2);
+    }
+    sliderField.style.transform = `translateX(-${offset}px)`;
+
+    // Add the 'clicked' class to the button
+    next.classList.add('clicked');
+    prev.classList.remove('clicked');
+  });
+
+  prev.addEventListener('click', () => {
+    // Logic for sliding
+    if (offset == 0) {
+      offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+    } else {
+      offset -= +width.slice(0, width.length - 2);
+    }
+    sliderField.style.transform = `translateX(-${offset}px)`;
+
+    // Add the 'clicked' class to the button
+    prev.classList.add('clicked');
+    next.classList.remove('clicked');
+  });
+
 });

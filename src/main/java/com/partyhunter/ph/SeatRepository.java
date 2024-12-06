@@ -7,6 +7,8 @@ import java.util.Optional;
 
 public interface SeatRepository extends JpaRepository<Seat, Long> {
 
+
+    int countByUserId(Long userId);
     List<Seat> findByEventType(String eventType);
     // Use exact field names from the Seat entity
     Optional<Seat> findByRowNumberAndSeatNumberAndEventType(int rowNumber, int seatNumber, String eventType);
