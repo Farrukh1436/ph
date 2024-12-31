@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 public class SeatBookingService {
 
     @Autowired
-    private SeatRepository seatBookingRepository;
+    private SeatRepository seatRepository;
 
     public int getBookedSeatsByUser(Long userId) {
-        return seatBookingRepository.countByUserId(userId);
+        return seatRepository.countByUserId(userId);
     }
 }
 
